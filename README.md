@@ -1,34 +1,15 @@
-Financial-ETL-Datalake-Pipeline/
-│
-├── data/                        # (optional if not sharing raw data)
-│   └── kpi_summary.csv          # Final exported dataset from Colab
-│
-├── SnowFlake/                  
-│   ├── ddl_create_tables.sql    # Table creation script
-│   ├── load_data_stage.sql      # Stage setup + COPY INTO commands
-│   └── fact_kpi_summary.sql     # SELECT test query
-│
-├── PowerBI/                     
-│   ├── Financial-KPI.pbix       # Power BI dashboard file
-│   └── visuals/                 
-│       └── KPI_Card_Screenshot.png
-│       └── KPI_Trend_LineChart.png
-│
-├── README.md                    # Final documentation
-├── .gitignore
-
 # 💼 Financial ETL Datalake Pipeline
 
-This project demonstrates a full-stack ETL pipeline for financial KPI analysis using **PySpark**, **Snowflake**, and **Power BI**. It automates ingestion, transformation, and reporting of KPI data for executive dashboards.
+This project demonstrates a full-stack ETL pipeline for financial KPI analysis using **PySpark**, **Snowflake**, and **Power BI**. It automates ingestion, transformation, and executive reporting of KPI data.
 
 ---
 
 ## 📌 Key Features
 
-- Built a PySpark pipeline to process transactions, invoices, and expenses.
-- Created a Snowflake database `financial_etl` with schema `kpi` and table `fact_kpi_summary`.
-- Loaded clean financial KPI data using `COPY INTO` from stage.
-- Visualized KPI performance in Power BI with variance cards and time-series trends.
+- Built a PySpark pipeline to process transactions, invoices, and expenses from mock financial datasets.
+- Created a Snowflake schema (`FINANCIAL_ETL.KPI`) and loaded data via internal stage and `COPY INTO` operations.
+- Queried final outputs with Snowflake SQL to verify data integrity.
+- Built a Power BI dashboard to visualize real-time performance, variance, and trends across departments.
 
 ---
 
@@ -37,19 +18,51 @@ This project demonstrates a full-stack ETL pipeline for financial KPI analysis u
 | Layer       | Tool            |
 |-------------|-----------------|
 | ETL         | Python, PySpark |
-| Storage     | Snowflake       |
-| Reporting   | Power BI        |
+| Datalake    | Snowflake       |
+| BI / Viz    | Power BI        |
 | Source Data | CSV (mock data) |
 
 ---
 
 ## 📊 Power BI Dashboard
 
-**KPI Variance Card:**
-Shows real-time variance between actual and target financial KPIs.
+**KPI Variance Summary:**
 
-**Trend Line Chart:**
-Visualizes `net_amount` vs `target_value` over time.
+Displays overall financial KPI variance by comparing actual and target values.
 
-![KPI Card Screenshot](PowerBI/visuals/KPI_Card_Screenshot.png)
-![Trend Chart Screenshot](PowerBI/visuals/KPI_Trend_LineChart.png)
+![KPI Summary Table](Screenshots/kpi_summary.PNG)
+
+---
+
+**Snowflake Data Validation:**
+
+Query confirmation using `SELECT * FROM FACT_KPI_SUMMARY` to validate loaded output.
+
+![Snowflake Output](Screenshots/financial_etl_kpi.PNG)
+
+---
+
+**Executive Dashboard View:**
+
+Clean Power BI dashboard displaying total net amount, target value, and KPI variance card.
+
+![Power BI View](Screenshots/power_bi.PNG)
+
+---
+
+## 📁 Folder Structure
+Financial-ETL-Datalake-Pipeline/ ├── data/ │ └── kpi_summary.csv ├── SnowFlake/ │ ├── ddl_create_tables.sql │ ├── copy_into_stage.sql │ └── select_final_output.sql ├── PowerBI/ │ └── Financial-KPI.pbix ├── Screenshots/ │ ├── kpi_summary.PNG │ ├── financial_etl_kpi.PNG │ └── power_bi.PNG ├── README.md ├── .gitignore
+
+
+---
+
+## 🧠 Author
+
+Built by **Yengkong Sayaovong**. Designed to showcase end-to-end data engineering and BI integration skills.
+
+---
+
+## ✅ Status
+
+✅ **Complete** – Deployed and ready
+
