@@ -37,7 +37,7 @@ Financial-ETL-Datalake-Pipeline/ ├── SnowFlake/ │ ├── schema.sql #
 
 | KPI Snowflake Table | Fact KPI Summary View |
 |---------------------|------------------------|
-| ![financial_etl_kpi](financial_etl_kpi.PNG) | ![kpi_summary](kpi_summary.PNG) |
+| ![financial_etl_kpi](Screenshots/financial_etl_kpi.PNG) | ![kpi_summary](Screenshots/kpi_summary.PNG) |
 
 
 ---
