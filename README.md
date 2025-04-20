@@ -1,71 +1,55 @@
-# 📊 Financial ETL Datalake Pipeline
+Financial-ETL-Datalake-Pipeline/
+│
+├── data/                        # (optional if not sharing raw data)
+│   └── kpi_summary.csv          # Final exported dataset from Colab
+│
+├── SnowFlake/                  
+│   ├── ddl_create_tables.sql    # Table creation script
+│   ├── load_data_stage.sql      # Stage setup + COPY INTO commands
+│   └── fact_kpi_summary.sql     # SELECT test query
+│
+├── PowerBI/                     
+│   ├── Financial-KPI.pbix       # Power BI dashboard file
+│   └── visuals/                 
+│       └── KPI_Card_Screenshot.png
+│       └── KPI_Trend_LineChart.png
+│
+├── README.md                    # Final documentation
+├── .gitignore
 
-This project simulates a **real-world ETL pipeline** for processing financial KPIs across departments. It integrates **PySpark**, **Snowflake**, and **Power BI** to ingest, transform, and visualize financial data for decision-making.
+# 💼 Financial ETL Datalake Pipeline
 
----
-
-## 🚀 Project Overview
-
-**Objective:** Build a scalable pipeline to process and monitor financial KPIs (e.g., cash flow, expenses, targets) across departments.
-
-**Tools & Tech Stack:**
-- `PySpark` (ETL and transformations)
-- `Snowflake` (data warehouse + SQL loading)
-- `Google Colab` (development environment)
-- `Power BI` (visual dashboard)
-- `GitHub` (version control)
-
----
-
-## 🧪 Key Features
-
-- ✅ Generate mock financial datasets with Faker
-- 🔄 Join, clean, and transform data with PySpark
-- 🧊 Load cleaned data into Snowflake `fact_kpi_summary` table
-- 📈 Visualize KPIs in Power BI: budget vs actuals, department comparisons
-- 📦 Export zipped output and SQL integration-ready tables
+This project demonstrates a full-stack ETL pipeline for financial KPI analysis using **PySpark**, **Snowflake**, and **Power BI**. It automates ingestion, transformation, and reporting of KPI data for executive dashboards.
 
 ---
 
-## 📂 Folder Structure
-Financial-ETL-Datalake-Pipeline/ ├── SnowFlake/ │ ├── schema.sql # Snowflake table & schema setup │ └── copy_into.sql # Load data from stage ├── Screenshots/ │ └── uploaded_table_sample.png # Visual proof of Snowflake load ├── notebooks/ │ └── Financial_ETL_Datalake_Pipeline.ipynb └── README.md
+## 📌 Key Features
 
-
----
-
-## 📸 Preview
-
-| KPI Snowflake Table | Fact KPI Summary View |
-|---------------------|------------------------|
-| ![financial_etl_kpi](Screenshots/financial_etl_kpi.PNG) | ![kpi_summary](Screenshots/kpi_summary.PNG) |
-
+- Built a PySpark pipeline to process transactions, invoices, and expenses.
+- Created a Snowflake database `financial_etl` with schema `kpi` and table `fact_kpi_summary`.
+- Loaded clean financial KPI data using `COPY INTO` from stage.
+- Visualized KPI performance in Power BI with variance cards and time-series trends.
 
 ---
 
-## 🧠 What I Learned
+## 🧱 Tech Stack
 
-- Setting up a real-world Snowflake schema with staging and COPY commands
-- Writing robust PySpark ETL pipelines in Colab
-- Automating KPI aggregation with joins and date parsing
-- Troubleshooting schema mismatches between PySpark and Snowflake
-- Deploying a reproducible project from notebook → database → dashboard
-
----
-
-## 🔗 Future Enhancements
-
-- Add DBT integration for transformation layer
-- Automate Snowflake uploads via Python + Streamlit
-- Schedule ETL pipelines via Airflow or dbt Cloud
+| Layer       | Tool            |
+|-------------|-----------------|
+| ETL         | Python, PySpark |
+| Storage     | Snowflake       |
+| Reporting   | Power BI        |
+| Source Data | CSV (mock data) |
 
 ---
 
-## 📌 Author
+## 📊 Power BI Dashboard
 
-**Yengkong Sayaovong**  
-[LinkedIn](https://www.linkedin.com/in/ysayaovong) | [GitHub](https://github.com/YSayaovong)
+**KPI Variance Card:**
+Shows real-time variance between actual and target financial KPIs.
 
----
+**Trend Line Chart:**
+Visualizes `net_amount` vs `target_value` over time.
 
-> ⭐ If you found this helpful, give the repo a star!
-
+![KPI Card Screenshot](PowerBI/visuals/KPI_Card_Screenshot.png)
+![Trend Chart Screenshot](PowerBI/visuals/KPI_Trend_LineChart.png)
