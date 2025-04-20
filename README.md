@@ -17,11 +17,6 @@ This project simulates a **real-world ETL pipeline** for processing financial KP
 
 ---
 
-## 🏗️ Project Architecture
-
-
----
-
 ## 🧪 Key Features
 
 - ✅ Generate mock financial datasets with Faker
@@ -40,7 +35,10 @@ Financial-ETL-Datalake-Pipeline/ ├── SnowFlake/ │ ├── schema.sql #
 
 ## 📸 Preview
 
-![Snowflake Table Load](Screenshots/uploaded_table_sample.png)
+| KPI Snowflake Table | Fact KPI Summary View |
+|---------------------|------------------------|
+| ![financial_etl_kpi](financial_etl_kpi.PNG) | ![kpi_summary](kpi_summary.PNG) |
+
 
 ---
 
