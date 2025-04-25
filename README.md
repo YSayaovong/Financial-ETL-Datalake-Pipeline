@@ -62,7 +62,7 @@ Below is a preview of the Power BI dashboard powered by the cleaned data from th
 - 📈 Forecasted Net Income
 - 💡 KPI Summary Cards
 
-![BI Visual](BI-Dashboard/ETL-Financial-BI-Dashboard-Summary.png)
+![BI Visual](Screenshots/ETL-Financial-BI-Dashboard-Summary.png)
 ---
 ## 🧠 Author
 
