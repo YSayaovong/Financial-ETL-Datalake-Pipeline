@@ -55,7 +55,15 @@ Financial-ETL-Datalake-Pipeline/ ├── data/ │ └── kpi_summary.csv �
 
 
 ---
+## 🔎 BI Output Example
+Below is a preview of the Power BI dashboard powered by the cleaned data from this ETL pipeline:
 
+- 📊 Monthly Revenue Trends
+- 📈 Forecasted Net Income
+- 💡 KPI Summary Cards
+
+![BI Visual](./BI-Dashboard/ETL-Financial-BI-Dashboard-Summary.png)
+---
 ## 🧠 Author
 
 Built by **Yengkong Sayaovong**. Designed to showcase end-to-end data engineering and BI integration skills.
