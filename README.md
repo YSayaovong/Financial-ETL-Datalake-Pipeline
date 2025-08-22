@@ -51,22 +51,22 @@ Clean Power BI dashboard displaying total net amount, target value, and KPI vari
 ---
 
 ## 📁 Folder Structure
-'''markdown
-Financial-ETL-Datalake-Pipeline/
-├── data/
-│ └── kpi_summary.csv
-├── SnowFlake/
-│ ├── ddl_create_tables.sql
-│ ├── copy_into_stage.sql
-│ └── select_final_output.sql
-├── PowerBI/
-│ └── Financial-KPI.pbix
-├── Screenshots/
-│ ├── kpi_summary.PNG
-│ ├── financial_etl_kpi.PNG
-│ └── power_bi.PNG
-├── README.md
+Financial-ETL-Datalake-Pipeline/ <br>
+├── data/ <br>
+│   └── kpi_summary.csv <br>
+├── SnowFlake/ <br>
+│   ├── ddl_create_tables.sql <br>
+│   ├── copy_into_stage.sql <br>
+│   └── select_final_output.sql <br>
+├── PowerBI/ <br>
+│   └── Financial-KPI.pbix <br>
+├── Screenshots/ <br>
+│   ├── kpi_summary.PNG <br>
+│   ├── financial_etl_kpi.PNG <br>
+│   └── power_bi.PNG <br>
+├── README.md <br>
 ├── .gitignore
+
 
 
 ---
@@ -88,6 +88,7 @@ Built by **Yengkong Sayaovong**. Designed to showcase end-to-end data engineerin
 ## ✅ Status
 
 ✅ **Complete** – Deployed and ready
+
 
 
 
